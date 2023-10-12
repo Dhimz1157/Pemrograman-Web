@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENJUMLAHAN BILANGAN</title>
+</head>
+
+<body>
+    <table>
+        <th>PENJUMLAHAN BILANGAN</th>
+    </table>
+    <table>
+        <tr>
+            <td>Bilangan Pertama</td>
+            <td><input type="number" id="angka1"></td>
+            <td>Bilangan kedua</td>
+            <td><input type="number" id="angka2"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="jumlahkan()">Jumlahkan</button>
+                <button onclick="ulang()">Ulang</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function jumlahkan(){
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 = parseFloat(document.getElementById("angka2").value);
+
+            if (!isNaN(angka1) && !isNaN(angka2)) {
+                var hasil = angka1 + angka2;
+                window.alert("Hasil penjumlahan: " + hasil);
+            } else {
+                window.alert("Masukkan dua bilangan valid terlebih dahulu.");
+            }
+
+        }
+        function ulang() {
+            document.getElementById("angka1").value = "";
+            document.getElementById("angka2").value = "";
+        }   
+    
+    </script>
+</body>
+</html>
